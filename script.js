@@ -54,7 +54,7 @@ function updateTimers() {
             minutes + ":" + (seconds < 10 ? "0" + seconds : seconds);
 
         // ₱50 first minute, then +₱50 every 2 minutes
-         let fee = (Math.floor(diff / 120) + 1) * 50;
+         let fee = (Math.floor(diff / 120) + 1) * 10;
         feeCell.innerText = "₱ " + fee;
 
         // DEBUG
