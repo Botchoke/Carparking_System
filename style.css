@@ -654,66 +654,6 @@ tr:hover{
     box-shadow:0 0 15px #4F7CAC;
 }
 
-.cards{
-    display:flex;
-    gap:30px;
-    margin-bottom:30px;
-}
-
-.card{
-    flex:1;
-    padding:25px;
-    background:rgba(0,0,0,0.65);
-    border:2px solid #4F7CAC;
-    border-radius:12px;
-    box-shadow:0 0 20px #4F7CAC;
-    text-align:center;
-}
-
-.card h3{
-    color:#D6E4F0;
-    font-size:18px;
-    margin-bottom:10px;
-    letter-spacing:1px;
-}
-
-.card p{
-    font-size:36px;
-    color:#4F7CAC;
-    font-weight:bold;
-}
-
-.chartBox{
-    background:rgba(0,0,0,0.65);
-    padding:40px;
-    border-radius:12px;
-    border:2px solid #4F7CAC;
-    box-shadow:0 0 25px #4F7CAC;
-    margin-bottom:20px;
-}
-
-.months{
-    text-align:center;
-}
-
-.months a{
-    display:inline-block;
-    padding:8px 16px;
-    margin:6px;
-    border-radius:8px;
-    text-decoration:none;
-    background:linear-gradient(45deg,#4F7CAC,#7A8FA6);
-    color:white;
-    font-size:14px;
-    font-weight:bold;
-    transition:0.3s;
-}
-
-.months a:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 10px #4F7CAC;
-}
-
 /* ============================================
    DASHBOARD STYLES (Added for revenue.php)
    ============================================ */
@@ -1089,18 +1029,6 @@ tr:hover{
     margin-top: 2px;
 }
 
-/* Chart Container */
-.chart-container {
-    background: rgba(0,0,0,0.3);
-    padding: 20px;
-    border-radius: 16px;
-    min-height: 300px;
-}
-.chart-container canvas {
-    max-height: 350px;
-    width: 100% !important;
-}
-
 /* Month Navigation (Dashboard version) */
 .month-nav {
     margin-top: 28px;
@@ -1136,18 +1064,6 @@ tr:hover{
     box-shadow: 0 0 20px rgba(79,124,172,0.3);
 }
 
-/* Override existing card styles for new design */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-bottom: 30px;
-}
-.cards .card {
-    flex: none;
-    max-width: none;
-}
-
 /* Today indicator dot */
 .today-dot {
     display: inline-block;
@@ -1170,117 +1086,6 @@ tr:hover{
     }
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 1200px) {
-    .kpi-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .stats-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 1024px) {
-    .row-2col {
-        grid-template-columns: 1fr;
-    }
-    .dashboard {
-        padding: 16px;
-    }
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .welcome {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .current-date-badge {
-        margin-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .kpi-grid {
-        grid-template-columns: 1fr;
-    }
-    .stats-row {
-        grid-template-columns: 1fr;
-    }
-    .cards {
-        grid-template-columns: 1fr;
-    }
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .nav-links {
-        gap: 16px;
-        flex-wrap: wrap;
-    }
-    .brand h1 {
-        font-size: 20px;
-    }
-    .kpi-value {
-        font-size: 22px;
-    }
-    .stat-value {
-        font-size: 20px;
-    }
-    .welcome {
-        font-size: 14px;
-        padding: 12px 18px;
-    }
-    .dashboard .months a {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    .container {
-        min-width: auto;
-        width: 100%;
-        padding: 10px;
-    }
-    body {
-        min-width: auto;
-    }
-    .current-date-badge {
-        font-size: 12px;
-        padding: 3px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dashboard {
-        padding: 10px;
-    }
-    .kpi-card {
-        padding: 15px;
-    }
-    .kpi-value {
-        font-size: 18px;
-    }
-    .stat-value {
-        font-size: 18px;
-    }
-    .card-title {
-        font-size: 14px;
-    }
-    .month-label,
-    .day-label {
-        width: 30px;
-        font-size: 11px;
-    }
-    .month-value,
-    .day-amount {
-        width: 55px;
-        font-size: 11px;
-    }
-    .percent-label {
-        width: 35px;
-        font-size: 10px;
-    }
-}
 /* ============================================
    DAILY REVENUE GRID STYLES
    ============================================ */
@@ -1476,109 +1281,6 @@ tr:hover{
     font-size: 12px;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-
-@media (max-width: 1024px) {
-    .week-group {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 6px;
-    }
-    
-    .day-card {
-        padding: 10px 6px;
-        min-height: 80px;
-    }
-    
-    .day-card .day-number {
-        font-size: 15px;
-    }
-    
-    .day-card .day-revenue {
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 768px) {
-    .week-group {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 4px;
-    }
-    
-    .day-card {
-        padding: 8px 4px;
-        min-height: 70px;
-        border-radius: 8px;
-    }
-    
-    .day-card .day-number {
-        font-size: 13px;
-    }
-    
-    .day-card .day-revenue {
-        font-size: 11px;
-    }
-    
-    .day-card .day-week {
-        font-size: 9px;
-    }
-    
-    .day-card .day-cars {
-        font-size: 10px;
-    }
-    
-    .today-highlight {
-        font-size: 11px;
-        padding: 3px 10px;
-    }
-    
-    .legend {
-        gap: 12px;
-    }
-    
-    .legend-item {
-        font-size: 11px;
-    }
-    
-    .legend-dot {
-        width: 10px;
-        height: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .week-group {
-        grid-template-columns: repeat(7, 1fr);
-        gap: 3px;
-    }
-    
-    .day-card {
-        padding: 6px 2px;
-        min-height: 60px;
-        border-radius: 6px;
-    }
-    
-    .day-card .day-number {
-        font-size: 11px;
-    }
-    
-    .day-card .day-revenue {
-        font-size: 10px;
-    }
-    
-    .day-card .day-week {
-        font-size: 8px;
-    }
-    
-    .day-card .day-cars {
-        font-size: 8px;
-    }
-    
-    .day-card .day-cars i {
-        font-size: 7px;
-    }
-}
 /* ============================================
    HISTORY PAGE STYLES
    ============================================ */
@@ -1991,7 +1693,46 @@ tr:hover{
    RESPONSIVE
    ============================================ */
 
+@media (max-width: 1200px) {
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 1024px) {
+    .row-2col {
+        grid-template-columns: 1fr;
+    }
+    .dashboard {
+        padding: 16px;
+    }
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .welcome {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .current-date-badge {
+        margin-left: 0;
+    }
+    .week-group {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+    }
+    .day-card {
+        padding: 10px 6px;
+        min-height: 80px;
+    }
+    .day-card .day-number {
+        font-size: 15px;
+    }
+    .day-card .day-revenue {
+        font-size: 13px;
+    }
     .history-top {
         flex-direction: column;
         align-items: stretch;
@@ -2003,6 +1744,87 @@ tr:hover{
 }
 
 @media (max-width: 768px) {
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+    .cards {
+        grid-template-columns: 1fr;
+    }
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+    .brand h1 {
+        font-size: 20px;
+    }
+    .kpi-value {
+        font-size: 22px;
+    }
+    .stat-value {
+        font-size: 20px;
+    }
+    .welcome {
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+    .dashboard .months a {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .container {
+        min-width: auto;
+        width: 100%;
+        padding: 10px;
+    }
+    body {
+        min-width: auto;
+    }
+    .current-date-badge {
+        font-size: 12px;
+        padding: 3px 12px;
+    }
+    .week-group {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 4px;
+    }
+    .day-card {
+        padding: 8px 4px;
+        min-height: 70px;
+        border-radius: 8px;
+    }
+    .day-card .day-number {
+        font-size: 13px;
+    }
+    .day-card .day-revenue {
+        font-size: 11px;
+    }
+    .day-card .day-week {
+        font-size: 9px;
+    }
+    .day-card .day-cars {
+        font-size: 10px;
+    }
+    .today-highlight {
+        font-size: 11px;
+        padding: 3px 10px;
+    }
+    .legend {
+        gap: 12px;
+    }
+    .legend-item {
+        font-size: 11px;
+    }
+    .legend-dot {
+        width: 10px;
+        height: 10px;
+    }
     .history-container {
         padding: 12px;
     }
@@ -2032,6 +1854,59 @@ tr:hover{
 }
 
 @media (max-width: 480px) {
+    .dashboard {
+        padding: 10px;
+    }
+    .kpi-card {
+        padding: 15px;
+    }
+    .kpi-value {
+        font-size: 18px;
+    }
+    .stat-value {
+        font-size: 18px;
+    }
+    .card-title {
+        font-size: 14px;
+    }
+    .month-label,
+    .day-label {
+        width: 30px;
+        font-size: 11px;
+    }
+    .month-value,
+    .day-amount {
+        width: 55px;
+        font-size: 11px;
+    }
+    .percent-label {
+        width: 35px;
+        font-size: 10px;
+    }
+    .week-group {
+        grid-template-columns: repeat(7, 1fr);
+        gap: 3px;
+    }
+    .day-card {
+        padding: 6px 2px;
+        min-height: 60px;
+        border-radius: 6px;
+    }
+    .day-card .day-number {
+        font-size: 11px;
+    }
+    .day-card .day-revenue {
+        font-size: 10px;
+    }
+    .day-card .day-week {
+        font-size: 8px;
+    }
+    .day-card .day-cars {
+        font-size: 8px;
+    }
+    .day-card .day-cars i {
+        font-size: 7px;
+    }
     .history-table th:nth-child(3),
     .history-table td:nth-child(3) {
         display: none;
